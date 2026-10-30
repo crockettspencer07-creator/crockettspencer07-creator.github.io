@@ -354,4 +354,5 @@ body { position: relative; }
 .project-item:has(a:focus-visible) { outline: 2px solid var(--north-arm); outline-offset: 4px; }
 .project-item h2 a:focus-visible { outline: none; }
 .project-summary { color: var(--slate); margin: 0; }
+.project-summary + .project-summary { margin-top: 0.75em; }
 @media (prefers-reduced-motion: reduce) { .project-item:hover { transform: none; } }
