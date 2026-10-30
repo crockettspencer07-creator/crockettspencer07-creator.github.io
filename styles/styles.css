@@ -331,3 +331,27 @@ body { position: relative; }
 .pdf-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
 @media (max-width: 700px) { .pdf-frame { display: none; } }
 @media (prefers-reduced-motion: reduce) { .btn:active { transform: none; } }
+
+
+/* ---------- Projects ---------- */
+
+.project-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 28px; }
+.project-item {
+  position: relative;
+  max-width: none;
+  border: 2px solid var(--shadow);
+  box-shadow: 6px 6px 0 var(--shadow);
+  background: var(--surface);
+  padding: clamp(22px, 4vw, 36px);
+}
+.project-item .kind { font-family: var(--font-pixel); font-size: var(--step-0); color: var(--north-arm); margin-bottom: 0.4em; }
+.project-item h2 { margin-bottom: 0.4em; }
+.project-item h2 a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--lake); text-decoration-thickness: 3px; text-underline-offset: 0.18em; }
+.project-item h2 a:hover { color: var(--lake); }
+/* the whole card opens the project; the title link carries the name for screen readers and keyboards */
+.project-item h2 a::after { content: ""; position: absolute; inset: 0; }
+.project-item:hover { box-shadow: 8px 8px 0 var(--shadow); transform: translate(-2px, -2px); }
+.project-item:has(a:focus-visible) { outline: 2px solid var(--north-arm); outline-offset: 4px; }
+.project-item h2 a:focus-visible { outline: none; }
+.project-summary { color: var(--slate); margin: 0; }
+@media (prefers-reduced-motion: reduce) { .project-item:hover { transform: none; } }

@@ -51,6 +51,7 @@ body{margin:0;background:var(--color-bg);color:var(--color-fg);font-family:var(-
 .sc-nav a[aria-current="page"]{color:var(--color-fg);border-bottom-color:#b8406f}
 .sc-header a:focus-visible{outline:2px solid #b8406f;outline-offset:3px}
 #dash-root{padding-top:24px}
+.sc-crumb{margin:0 0 20px;font-size:15px}.sc-crumb a{color:var(--color-fg-muted);text-decoration:none;font-weight:500}.sc-crumb a:hover{color:var(--color-fg);text-decoration:underline}
 body{position:relative}.sc-header,#dash-root{position:relative;z-index:1}
 .pixel-fade{position:absolute;top:0;right:0;width:min(208px,calc((100vw - 1200px) / 2 - 8px));aspect-ratio:26/20;height:auto;pointer-events:none;display:none}
 .pixel-fade .a{fill:#1e6b76}.pixel-fade .b{fill:#1e6b76;opacity:.55}.pixel-fade .c{fill:#1e6b76;opacity:.28}
@@ -113,12 +114,13 @@ body{position:relative}.sc-header,#dash-root{position:relative;z-index:1}
     <a class="sc-name" href="../index.html">Portfolio</a>
     <nav class="sc-nav" aria-label="Main">
         <a href="../index.html">Home</a>
-        <a href="water-model.html" aria-current="page">Utah Water Crisis Case</a>
+        <a href="projects.html" aria-current="page">Projects</a>
         <a href="writing.html">Writing</a>
         <a href="resume.html">Resume</a>
     </nav>
 </header>
 <div id="dash-root">
+<p class="sc-crumb"><a href="projects.html">&larr; All projects</a></p>
 <style>
 .uw{display:flex;flex-direction:column;gap:var(--cds-gap-lg);font-family:var(--font-anthropic-sans);font-variant-numeric:tabular-nums}
 .uw h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:var(--cds-font-size-title);margin:0;text-wrap:balance}
