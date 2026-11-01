@@ -164,19 +164,22 @@ body { position: relative; }
 }
 @media (min-width: 820px) { .intro { grid-template-columns: minmax(0, 1fr) minmax(0, 340px); } }
 .intro h1 { margin-bottom: 0.3em; }
-.pixel-map {
+.headshot {
   display: block;
   width: 100%;
-  max-width: 340px;
+  max-width: 300px;
   height: auto;
-  image-rendering: pixelated;
-  border: 2px solid var(--shadow);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--shadow);
   box-shadow: 6px 6px 0 var(--shadow);
+  justify-self: end;
 }
 .intro .role { font-size: var(--step-1); color: var(--lake); font-weight: 500; margin-bottom: 0.6em; }
 .intro .lede { font-size: var(--step-1); line-height: 1.5; max-width: 34ch; }
 
-@media (max-width: 819px) { .pixel-map { max-width: 240px; } }
+@media (max-width: 819px) { .headshot { max-width: 168px; justify-self: start; order: -1; } }
 
 .about { display: grid; gap: 8px 48px; grid-template-columns: 1fr; }
 .about .facts { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; align-content: start; }
@@ -346,6 +349,20 @@ body { position: relative; }
 }
 .project-item .kind { font-family: var(--font-pixel); font-size: var(--step-0); color: var(--north-arm); margin-bottom: 0.4em; }
 .project-item h2 { margin-bottom: 0.4em; }
+.project-icon {
+  display: block;
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  image-rendering: pixelated;
+  border: 2px solid var(--shadow);
+  box-shadow: 4px 4px 0 var(--shadow);
+  margin-bottom: 20px;
+}
+@media (min-width: 760px) {
+  .project-item { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 32px; align-items: start; }
+  .project-icon { margin: 6px 0 0; }
+}
 .project-item h2 a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--lake); text-decoration-thickness: 3px; text-underline-offset: 0.18em; }
 .project-item h2 a:hover { color: var(--lake); }
 /* the whole card opens the project; the title link carries the name for screen readers and keyboards */
