@@ -178,6 +178,12 @@ body { position: relative; }
 }
 .intro .role { font-size: var(--step-1); color: var(--lake); font-weight: 500; margin-bottom: 0.6em; }
 .intro .lede { font-size: var(--step-1); line-height: 1.5; max-width: 34ch; }
+.intro .seeking { font-weight: 600; margin: 0.4em 0 0; padding-left: 18px; position: relative; max-width: 44ch; }
+.intro .seeking::before { content: ""; position: absolute; left: 0; top: 0.5em; width: 9px; height: 9px; background: var(--north-arm); }
+.intro-links { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; margin: 22px 0 0; }
+.intro-links a:not(.btn) { font-weight: 600; }
+.feature-role { font-size: var(--step--1); color: var(--slate); font-weight: 500; }
+.project-role { margin: 0.9em 0 0; font-size: var(--step--1); color: var(--ink); border-left: 4px solid var(--lake); padding-left: 12px; }
 
 @media (max-width: 819px) { .headshot { max-width: 168px; justify-self: start; order: -1; } }
 

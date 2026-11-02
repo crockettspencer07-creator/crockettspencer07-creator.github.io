@@ -51,6 +51,15 @@ body{margin:0;background:var(--color-bg);color:var(--color-fg);font-family:var(-
 .sc-nav a[aria-current="page"]{color:var(--color-fg);border-bottom-color:#b8406f}
 .sc-header a:focus-visible{outline:2px solid #b8406f;outline-offset:3px}
 #dash-root{padding-top:24px}
+.sc-glance{margin:8px 0 28px;padding:20px;border:2px solid var(--color-fg);box-shadow:5px 5px 0 var(--color-fg);background:var(--color-bg)}
+.sc-glance-h{margin:0 0 14px;font-family:"Pixelify Sans","Courier New",monospace;font-weight:600;font-size:17px;color:#b8406f}
+.sc-points{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:14px 22px;margin-bottom:14px}
+.sc-point h3{margin:0 0 4px;font-size:16px;font-weight:600}
+.sc-point p{margin:0;color:var(--color-fg-muted);font-size:15px;line-height:1.5}
+.sc-note{margin:10px 0 0;font-size:14px;line-height:1.5;color:var(--color-fg-muted);max-width:none}
+.sc-note strong{color:var(--color-fg)}
+.sc-fine{font-size:13px}
+@media (prefers-color-scheme: dark){.sc-glance-h{color:#e77ba3}}
 .sc-crumb{margin:0 0 20px;font-size:15px}.sc-crumb a{color:var(--color-fg-muted);text-decoration:none;font-weight:500}.sc-crumb a:hover{color:var(--color-fg);text-decoration:underline}
 body{position:relative}.sc-header,#dash-root{position:relative;z-index:1}
 .pixel-fade{position:absolute;top:0;right:0;width:min(208px,calc((100vw - 1200px) / 2 - 8px));aspect-ratio:26/20;height:auto;pointer-events:none;display:none}
@@ -221,9 +230,20 @@ viewport instead of scrolling inside .tbl. */
 </style>
 <div class="uw">
 <header id="top">
-<h1>Utah Water Allocation Model</h1>
+<h1>Utah Water Crisis Case</h1>
 <p class="lede" id="takeaway" data-source="basin_ag_share options lake_response">—</p>
 </header>
+<section class="sc-glance" aria-labelledby="glance-h">
+<h2 id="glance-h" class="sc-glance-h">The case at a glance</h2>
+<div class="sc-points">
+<div class="sc-point"><h3>Where the lake ends up</h3><p>About 4,198 ft by 2055, back inside the healthy range. Today it sits at 4,191 ft.</p></div>
+<div class="sc-point"><h3>What it costs</h3><p>$100M a year in state funding. Mandate fines add to it and help the state buy water rights from willing sellers.</p></div>
+<div class="sc-point"><h3>Who pays</h3><p>The heaviest water users: a scarcity tax on industry, a levy on over-watered crops, a charge on heavy residential use, and fines for missing the mandated cut. Farmers who sell their rights are paid for them.</p></div>
+</div>
+<p class="sc-note"><strong>Why a 1,200 KAF cut:</strong> water is lost to evaporation and to plants along the riverbanks on its way to the lake, so about 1,200 KAF a year has to stay in the rivers for the roughly 875 KAF the lake needs to reach it. KAF means thousand acre-feet; one acre-foot covers an acre of land a foot deep.</p>
+<p class="sc-note sc-role"><strong>My role:</strong> One of a team of three. I designed and built the model using Claude and Codex: I added the research, defined the assumptions, outlined the constraints, fixed the ones that were wrong, and found a solution that works.</p>
+<p class="sc-note sc-fine">These figures are for the package as it opens. Move the levers below to see how they change.</p>
+</section>
 <nav class="tabs" role="tablist" aria-label="The plan">
 <button role="tab" id="tab-pkg" aria-selected="true" data-pane="pkg">The package</button>
 <button role="tab" id="tab-sim" aria-selected="false" data-pane="sim">Simulation</button>
