@@ -300,6 +300,7 @@ body { position: relative; }
 /* ---------- Resume entries ---------- */
 
 .resume-head .contact { display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.resume-head .resume-download { margin-top: 22px; }
 .entry { margin-bottom: 32px; }
 .entry-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 0 16px; }
 .entry-head h3 { margin: 0; }
